@@ -9,5 +9,5 @@ namespace TaxSolution.TaxCalculator.Interfaces;
 
 public interface ITaxRule
 {
-    int CalculateTaxPercentage(TaxPayer taxPayer, int currentPercentage);
+    TaxPayer CalculateTaxPercentage(TaxPayer taxPayer, double currentPercentage);
 }

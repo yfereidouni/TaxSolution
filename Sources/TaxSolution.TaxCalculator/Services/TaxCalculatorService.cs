@@ -11,7 +11,7 @@ namespace TaxSolution.TaxCalculator.Services
 {
     public class TaxCalculatorService
     {
-        public int CalculateTaxPercentage(TaxPayer taxPayer)
+        public TaxPayer CalculateTaxPercentage(TaxPayer taxPayer)
         {
             var ruleType = typeof(ITaxRule);
 

@@ -13,21 +13,24 @@ public class RetiredRuleTest
     private TaxCalculatorService _calculator = new TaxCalculatorService();
 
     [Fact]
-    public void Retired_TaxPayer_SHOULD_Pay_One_Percent_Tax()
+    public void Tax_For_Retired()
     {
         //Arrange
         TaxPayer taxPayer = new TaxPayer
         {
-            TaxCitizen = true,
-            HasDisability = false,
-            IsRetired = true
+            GrossIncome = 45700,
+            IsSingle = true,
+            IsRetired = true,
+            TaxedAmount = 0
         };
 
         //Act
         var result = _calculator.CalculateTaxPercentage(taxPayer);
 
         //Assert
-        Assert.Equal(1, result);
+        Assert.Equal(1710, result.TaxedAmount);
     }
+
+
 }
 
