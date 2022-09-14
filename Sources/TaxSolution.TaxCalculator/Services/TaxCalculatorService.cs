@@ -11,22 +11,19 @@ namespace TaxSolution.TaxCalculator.Services
 {
     public class TaxCalculatorService
     {
-        public class TaxCalculator
+        public int CalculateTaxPercentage(TaxPayer taxPayer)
         {
-            public int CalculateTaxPercentage(TaxPayer taxPayer)
-            {
-                var ruleType = typeof(ITaxRule);
+            var ruleType = typeof(ITaxRule);
 
-                // As soon as defining any rules it add to our Engine ------------
-                IEnumerable<ITaxRule> rules = this.GetType().Assembly.GetTypes()
-                    .Where(p => ruleType.IsAssignableFrom(p) && !p.IsInterface)
-                    .Select(r => Activator.CreateInstance(r) as ITaxRule);
-                //-----------------------------------------------------------------
+            // As soon as defining any rules it add to our Engine ------------
+            IEnumerable<ITaxRule> rules = this.GetType().Assembly.GetTypes()
+                .Where(p => ruleType.IsAssignableFrom(p) && !p.IsInterface)
+                .Select(r => Activator.CreateInstance(r) as ITaxRule);
+            //-----------------------------------------------------------------
 
-                var engine = new TaxRuleEngine(rules);
+            var engine = new TaxRuleEngine(rules);
 
-                return engine.CalculateTaxPercentage(taxPayer);
-            }
+            return engine.CalculateTaxPercentage(taxPayer);
         }
     }
 }
