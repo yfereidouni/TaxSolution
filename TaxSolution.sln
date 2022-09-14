@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxSolution.Bad_TaxCalculator", "TaxSolution.Bad_TaxCalculator\TaxSolution.Bad_TaxCalculator.csproj", "{5642915E-5C85-4AAD-908E-3697CE192397}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxSolution.Bad_TaxCalculator.Test", "TaxSolution.TaxSolution.Bad_TaxCalculator.Test\TaxSolution.Bad_TaxCalculator.Test.csproj", "{AB04D066-609F-4870-A61D-525498A9F053}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5642915E-5C85-4AAD-908E-3697CE192397}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5642915E-5C85-4AAD-908E-3697CE192397}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5642915E-5C85-4AAD-908E-3697CE192397}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5642915E-5C85-4AAD-908E-3697CE192397}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB04D066-609F-4870-A61D-525498A9F053}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB04D066-609F-4870-A61D-525498A9F053}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB04D066-609F-4870-A61D-525498A9F053}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB04D066-609F-4870-A61D-525498A9F053}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6E1E9B69-24BB-41E5-A4E9-CC5D7E671566}
+	EndGlobalSection
+EndGlobal
