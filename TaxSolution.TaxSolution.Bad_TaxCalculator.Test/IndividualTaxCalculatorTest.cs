@@ -9,26 +9,6 @@ namespace TaxSolution.Bad_TaxCalculator.Test
 {
     public class IndividualTaxCalculatorTest
     {
-        private TaXCalculator _calculator = new TaXCalculator();
-
-        [Fact]
-        public void Retired_TaxPayer_SHOULD_Pay_One_Percent_Tax()
-        {
-            //Arrange
-            TaxPayer taxPayer = new TaxPayer
-            {
-                TaxCitizen = true,
-                HasDisability = false,
-                IsRetired = true
-            };
-
-            //Act
-            var result = _calculator.CalculateTaxPercentage(taxPayer);
-
-            //Assert
-            Assert.Equal(1, result);
-        }
-
         [Fact]
         public void None_TaxResident_SHOULD_NOT_BE_Calculate()
         {
