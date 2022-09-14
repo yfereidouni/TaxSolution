@@ -28,5 +28,23 @@ namespace TaxSolution.Bad_TaxCalculator.Test
             //Assert
             Assert.Equal(exceptedErrorMessage, ExceptionResult.Message);
         }
+
+        [Fact]
+        public void Disable_TaxPayer_Should_Be_Zero_Percent_Tax()
+        {
+            //Arrange
+            TaxPayer taxPayer = new TaxPayer()
+            {
+                TaxCitizen = true,
+                HasDisability = true
+            };
+            IndividualTaxCalculator individualTaxCalculator = new IndividualTaxCalculator();
+
+            //Act
+            var result = individualTaxCalculator.CalculateTaxPercentage(taxPayer);
+
+            //Assert
+            Assert.Equal(0, result);
+        }
     }
 }
